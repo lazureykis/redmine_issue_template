@@ -1,6 +1,6 @@
 class FillStiTypesForIssueTemplates < ActiveRecord::Migration
   def up
-    IssueTemplate.update_all :type => 'GlobalIssueTemplate'
+    execute %Q{UPDATE issue_templates SET type = 'GlobalIssueTemplate'}
   end
 
   def down
